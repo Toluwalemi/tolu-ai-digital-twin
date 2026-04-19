@@ -1,0 +1,26 @@
+[tool.ruff]
+line-length = 100
+target-version = "py312"
+src = ["backend"]
+extend-exclude = [".venv", "__pycache__", "terraform/.terraform"]
+
+[tool.ruff.lint]
+select = [
+  "E",    # pycodestyle errors
+  "W",    # pycodestyle warnings
+  "F",    # pyflakes
+  "I",    # isort
+  "B",    # flake8-bugbear
+  "UP",   # pyupgrade
+  "SIM",  # flake8-simplify
+  "RUF",  # ruff-specific
+]
+ignore = [
+  "E501",  # line length — let the formatter handle it
+]
+
+[tool.ruff.lint.per-file-ignores]
+"backend/app/__init__.py" = ["F401"]
+
+[tool.ruff.format]
+quote-style = "double"

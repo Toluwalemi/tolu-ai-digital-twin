@@ -1,0 +1,9 @@
+# Copy this file to terraform.tfvars and fill in the values.
+
+project_id         = "andela-digital-twin"
+region             = "europe-west1"
+service_name       = "digital-twin"
+docker_image_tag   = "bootstrap"
+chat_model         = "google/gemini-2.5-flash-lite"
+openrouter_api_key = "sk-or-v1-REPLACE_ME"
+github_repo        = "Toluwalemi/tolu-ai-digital-twin"

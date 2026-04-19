@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Toluwalemi — AI Digital Twin</title>
+  <meta name="description" content="Chat with Toluwalemi's AI digital twin. Ask about his background, skills, experience, and projects.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="terminal-container" id="terminal-container">
+    <!-- Terminal chrome -->
+    <div class="terminal-header">
+      <div class="terminal-dots">
+        <span class="dot dot--red"></span>
+        <span class="dot dot--yellow"></span>
+        <span class="dot dot--green"></span>
+      </div>
+      <div class="terminal-title">toluwalemi@digital-twin:~</div>
+      <div class="terminal-dots" style="visibility: hidden;">
+        <span class="dot"></span><span class="dot"></span><span class="dot"></span>
+      </div>
+    </div>
+
+    <!-- Terminal body -->
+    <div class="terminal-body">
+      <!-- Welcome section -->
+      <div class="welcome-section">
+        <pre class="ascii-art" aria-hidden="true">
+        </pre>
+        <p class="welcome-text">$ digital twin online — ask me anything.</p>
+        <p class="welcome-subtext">I'm an AI version of Toluwalemi. Ask about his background, skills, projects, or interests.</p>
+      </div>
+
+      <!-- Suggestion chips -->
+      <div class="suggestions" id="suggestions">
+        <button class="chip" data-q="Tell me more about yourself" id="chip-about">Tell me more about yourself</button>
+        <button class="chip" data-q="What's your tech stack?" id="chip-stack">What's your tech stack?</button>
+        <button class="chip" data-q="What are your hobbies?" id="chip-hobbies">What are your hobbies?</button>
+        <button class="chip" data-q="Are you open to new opportunities?" id="chip-opportunities">Are you open to new opportunities?</button>
+        <button class="chip" data-q="What sets you apart as an engineer?" id="chip-unique">What sets you apart as an engineer?</button>
+      </div>
+
+      <!-- Chat log -->
+      <div class="chat-log" id="chat-log" role="log" aria-live="polite" aria-label="Chat conversation"></div>
+
+      <!-- Input area -->
+      <form class="input-area" id="chat-form" autocomplete="off">
+        <div class="input-prompt">
+          <span class="prompt-user">guest</span><span class="prompt-at">@</span><span class="prompt-host">toluwalemi</span><span class="prompt-colon"> : ~ $</span>
+        </div>
+        <input
+          type="text"
+          id="chat-input"
+          class="chat-input"
+          placeholder="Type your question..."
+          maxlength="500"
+          aria-label="Type your question"
+          autofocus
+        >
+        <button type="submit" class="send-btn" id="send-btn" aria-label="Send message">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="22" y1="2" x2="11" y2="13"></line>
+            <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+          </svg>
+        </button>
+      </form>
+    </div>
+
+    <!-- Footer -->
+    <div class="terminal-footer">
+      <span class="footer-text">
+        Built by <a href="https://toluwalemi.com" target="_blank" rel="noopener noreferrer">Toluwalemi</a>
+        · <a href="https://github.com/Toluwalemi" target="_blank" rel="noopener noreferrer">GitHub</a>
+        · <a href="https://linkedin.com/in/toluwalemioluwadare" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+      </span>
+      <span class="footer-status" id="footer-status">● online</span>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
