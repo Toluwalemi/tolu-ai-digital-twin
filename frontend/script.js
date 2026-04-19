@@ -179,6 +179,10 @@
       var question = chip.dataset.q;
       if (!question) return;
       input.value = question;
+      chip.remove();
+      if (!suggestions.querySelector(".chip")) {
+        suggestions.style.display = "none";
+      }
       form.dispatchEvent(
         new Event("submit", { bubbles: true, cancelable: true })
       );
@@ -207,11 +211,6 @@
     setFormDisabled(true);
     appendMessage("user", userText);
     input.value = "";
-
-    // Hide suggestions after first message.
-    if (suggestions && suggestions.style.display !== "none") {
-      suggestions.style.display = "none";
-    }
 
     history.push({ role: "user", content: userText });
     if (history.length > maxHistoryMessages) {
